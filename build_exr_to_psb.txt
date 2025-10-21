@@ -1,0 +1,13 @@
+pyinstaller main.py --noconfirm --onedir --icon "resources\app_icon.ico" --add-data "resources;resources" --add-data "venv\Lib\site-packages\pywin32_system32;pywin32_system32" --collect-all photoshop --collect-all pywin32 --collect-all PyQt5 --hidden-import photoshop.api --hidden-import win32com --hidden-import pywin32 --name "AppExrToPSB_v7.2.2"
+
+pyinstaller main.py --noconfirm --noconsole --onedir --icon "resources\app_icon.ico" --add-data "resources;resources" --add-data "data;data" --add-data "venv\Lib\site-packages\pywin32_system32;pywin32_system32" --collect-all photoshop --collect-all pywin32 --collect-all PyQt5 --hidden-import photoshop.api --hidden-import win32com --hidden-import pywin32 --name "AppExrToPSB_v7.2.2"
+
+pip install PyQt5 python-dotenv photoshop-python-api pywin32 pygetwindow pyautogui
+pip show pyinstaller
+pip install pyinstaller
+
+python -m venv venv
+venv\Scripts\activate
+deactivate
+
+pyinstaller main.py --noconfirm --onedir --noconsole --icon "resources/app_icon.ico" --add-data "resources;resources" --add-data "connected_ps/resources;connected_ps/resources" --add-data "venv/Lib/site-packages/pywin32_system32;pywin32_system32" --collect-all photoshop --collect-all pywin32 --collect-all PyQt5 --hidden-import photoshop.api --hidden-import win32com --hidden-import pywin32 --name "AppExrToPSB_v7.2.4"
